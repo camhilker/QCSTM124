@@ -89,7 +89,7 @@ def download_csv():
     form = DownloadForm()
     if form.validate_on_submit():
         
-        query_1 = Run.query.filter(Run.timestamp >= str(form.start_date.data) + '00:00:00', Run.timestamp < str(form.end_date.data) + '00:00:00').all()
+        query_1 = Run.query.filter(Run.timestamp >= str(form.start_date.data) + ' 00:00:00', Run.timestamp < str(form.end_date.data) + ' 00:00:00').all()
         query_2 = [item for sublist in [row.errors.all() for row in query_1] for item in sublist]
         query_3 = [item for sublist in [row.panels.all() for row in query_1] for item in sublist]
 
