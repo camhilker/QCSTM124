@@ -1,0 +1,126 @@
+2021-09-24 10:07:39,229 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 122, in download_csv
+    column_names = [col for col in query_2[0].__dict__]
+IndexError: list index out of range
+2021-09-24 10:09:18,202 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 122, in download_csv
+    #column_names = [col for col in query_2[0].__dict__]
+IndexError: list index out of range
+2021-09-24 10:09:28,719 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-24 10:09:39,415 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 123, in download_csv
+    column_names.pop(column_names.index('_sa_instance_state'))
+ValueError: '_sa_instance_state' is not in list
+2021-09-24 10:10:14,490 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-24 10:10:29,515 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 148, in download_csv
+    column_names = [col for col in query_3[0].__dict__]
+IndexError: list index out of range
+2021-09-24 10:10:48,311 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-24 10:14:15,814 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-24 10:14:34,755 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-24 10:20:56,882 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-24 10:20:59,334 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 168, in download_csv
+    memory_file = BytesIO()
+NameError: name 'BytesIO' is not defined
+2021-09-24 10:21:15,841 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-24 10:21:30,759 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 96, in download_csv
+    column_names = [col for col in query_1[0].__dict__]
+IndexError: list index out of range
+2021-09-24 10:21:42,061 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 172, in download_csv
+    data = zipfile.ZipInfo(individualFile["Content-Disposition"])
+TypeError: 'Response' object is not subscriptable

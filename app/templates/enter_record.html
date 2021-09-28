@@ -1,0 +1,156 @@
+<!---(twitter)bootstrap and datepicker are additional packages that must be installed--->
+
+<!---Bootstrap Doc: https://getbootstrap.com/docs/5.1/getting-started/introduction/--->
+<!---Cheat sheet for Bootstrap classes: https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp--->
+
+<!---Datepicker Doc: https://pypi.org/project/Flask-Datepicker/--->
+
+
+
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block scripts %}
+  {{ super() }}
+  {{ datepicker.loader(theme='base') }} {# to load jQuery-ui #}
+  {{ datepicker.picker(id=".dp", dateFormat='mm-dd-yy') }}
+{% endblock %}
+
+{% block app_content %}
+    <h1>Attachment II: Lot Traceability</h1>
+    <p>
+        Please enter data as it appears on QCSTM-124 Attachment II. Any fields marked with N/A on Attachment II should be left blank.
+    </p>
+    <br>
+    <br>
+    <br>
+
+    
+    <form action="" method="post" novalidate autocomplete="off">
+        {{ form.hidden_tag() }}
+        <table class="table table-hover">
+            <tr><h4>Run Info:</h4></tr>
+            <tr>
+                <td>
+                    {{ wtf.form_field(form.operator_1, class='form-control')}}
+                    {{ wtf.form_field(form.operator_2, class='form-control')}}
+                </td>
+                <td>
+                    {{ wtf.form_field(form.date_begin, class='form-control dp')}}
+                    {{ wtf.form_field(form.date_end, class='form-control dp')}}
+                </td>
+                <td>
+                    {{ wtf.form_field(form.final_dis)}}
+                </td>
+            </tr>
+        </table>
+        <table class="table table-hover">
+            <tr><h4>Materials:</h4></tr>
+            <tr>
+                <td>
+                    {{ wtf.form_field(form.lot_p1, class='form-control')}}
+                    {{ wtf.form_field(form.e_dat_p1, class='form-control dp')}}
+                </td>    
+                <td>
+                    {{ wtf.form_field(form.lot_p2, class='form-control')}}
+                    {{ wtf.form_field(form.e_dat_p2, class='form-control dp')}}
+                </td>    
+                <td>
+                    {{ wtf.form_field(form.lot_p3, class='form-control')}}
+                    {{ wtf.form_field(form.e_dat_p3, class='form-control dp')}}
+                </td>    
+                <td>
+                    {{ wtf.form_field(form.lot_p4, class='form-control')}}
+                    {{ wtf.form_field(form.e_dat_p4, class='form-control dp')}}
+                </td>    
+                <td>
+                    {{ wtf.form_field(form.lot_p5, class='form-control')}}
+                    {{ wtf.form_field(form.e_dat_p5, class='form-control dp')}}
+                </td>    
+                <td>
+                    {{ wtf.form_field(form.lot_p6, class='form-control')}}
+                    {{ wtf.form_field(form.e_dat_p6, class='form-control dp')}}
+                </td>
+            </tr>
+        </table>
+        <table class="table table-hover">
+            <tr>
+                <td>
+                    <br><br>
+                    {{ wtf.form_field(form.lot_nc, class='form-control')}}
+                    {{ wtf.form_field(form.e_dat_nc, class='form-control dp')}}
+                </td>    
+                <td>
+                    <br><br>
+                    {{ wtf.form_field(form.lot_vii, class='form-control')}}
+                    {{ wtf.form_field(form.e_dat_vii, class='form-control dp')}}
+                </td>
+            </tr>
+        </table>
+        <table class="table table-hover">
+            <tr><h4>Equipment:</h4></tr>
+            <tr>
+                <td>
+                    {{ wtf.form_field(form.bsc_id, class='form-control')}}
+                    <table>
+                        <br>
+                        <tr><b>Calibration Due Date</b></tr>
+                        <tr>
+                            <td>
+                            {{ wtf.form_field(form.bsc_cdd_mo)}}
+                            </td>
+                            <td>
+                            {{ wtf.form_field(form.bsc_cdd_yr)}}
+                            </td>
+                        </tr>
+                    </table>
+                </td>    
+                <td>
+                    {{ wtf.form_field(form.pip_id, class='form-control')}}
+                    <table>
+                        <br>
+                        <tr><b>Calibration Due Date</b></tr>
+                        <tr>
+                            <td>
+                            {{ wtf.form_field(form.pip_cdd_mo)}}
+                            </td>
+                            <td>
+                            {{ wtf.form_field(form.pip_cdd_yr)}}
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="table table-hover">
+            <tr><h4>Instrument Errors:</h4></tr>
+            <tr>{{ wtf.form_field(form.is_ie, class='form-control') }}  <br></tr>
+            <tr>
+                <td>
+                    {{ wtf.form_field(form.ie1_id, class='form-control')}} <br>
+                    {{ wtf.form_field(form.ie1_type, class='form-control')}}
+                </td>    
+                <td>
+                    {{ wtf.form_field(form.ie2_id, class='form-control')}} <br>
+                    {{ wtf.form_field(form.ie2_type, class='form-control')}}
+                </td>    
+                <td>
+                    {{ wtf.form_field(form.ie3_id, class='form-control')}} <br>
+                    {{ wtf.form_field(form.ie3_type, class='form-control')}}
+                </td>    
+                <td>
+                    {{ wtf.form_field(form.ie4_id, class='form-control')}} <br>
+                    {{ wtf.form_field(form.ie4_type, class='form-control')}}
+                </td>    
+                <td>
+                    {{ wtf.form_field(form.ie5_id, class='form-control')}} <br>
+                    {{ wtf.form_field(form.ie5_type, class='form-control')}}
+                </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <p><input type=submit class='btn btn-danger btn-block'></p>
+    </form>
+    <br>
+{% endblock %}

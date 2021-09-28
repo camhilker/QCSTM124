@@ -1,0 +1,46 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {{ title }} - QCSTM-124
+{% endblock %}
+
+{% block navbar %}
+<!---template for toolbar--->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>    
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a>QCSTM-124</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-center">
+            <li><a href="{{ url_for('enter_record') }}">Enter New Record</a></li>
+            <li><a href="{{ url_for('view_records') }}">View Previous Records</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><img src="{{ url_for('static', filename='logo.png') }}" alt="Luminex Logo" height="40px" width="190px"/></li>
+            <!---<br><li><i>a DiaSorin Company</i></li>--->
+        </ul>
+      </div>
+    </nav>
+{% endblock %}
+
+{% block content %}
+<!---template for flask flash alerts, alerts are constructed as flask.flash(message, category) in routes.py--->
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        {# application content needs to be provided in the app_content block #}
+        {% block app_content %}{% endblock %}
+    </div>
+{% endblock %}

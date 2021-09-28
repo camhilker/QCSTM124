@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block scripts %}
+  {{ super() }}
+  {{ datepicker.loader(theme='base') }} {# to load jQuery-ui #}
+  {{ datepicker.picker(id=".dp", dateFormat='mm-dd-yy') }}
+{% endblock %}
+
+{% block app_content %}
+
+  <h3>Data Retrieval for Database Merge</h3>
+  <p>
+    <br>
+    <br>
+    Please enter a date range (data is pulled between 00:00:00 of start date and 00:00:00 of day following end date, aka including data through end date):
+    <br>
+    <br>
+  </p>
+
+
+  <form action="" method="post" novalidate autocomplete="off">
+    {{ form.hidden_tag() }}
+    <table class="table table-hover">
+      <tr>
+        <td>
+          {{ wtf.form_field(form.start_date, class='form-control dp')}}
+        </td>
+        <td>
+          {{ wtf.form_field(form.end_date, class='form-control dp')}}
+        </td>
+      </tr>
+    </table>
+    <input type=submit class='btn btn-warning'>
+  </form>
+{% endblock %}

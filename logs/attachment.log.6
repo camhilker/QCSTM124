@@ -1,0 +1,112 @@
+2021-09-15 10:59:50,590 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 90, in download_csv
+    si = StringIO()
+NameError: name 'io' is not defined
+2021-09-15 11:00:02,457 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:00:04,576 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 92, in download_csv
+    cw.writerows(query)
+_csv.Error: iterable expected, not Run
+2021-09-15 11:07:49,966 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:08:48,914 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:09:19,248 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:21:01,582 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:21:22,928 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 87, in download_csv
+    if form.validate_on_submit():
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask_wtf\form.py", line 100, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\wtforms\form.py", line 318, in validate
+    return super(Form, self).validate(extra)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\wtforms\form.py", line 150, in validate
+    if not field.validate(self, extra):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\wtforms\fields\core.py", line 226, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\wtforms\fields\core.py", line 246, in _run_validation_chain
+    validator(form, self)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\forms.py", line 128, in validate_end_date
+    if form.start_date.data > field.data or field.data == None:
+TypeError: '>' not supported between instances of 'datetime.date' and 'NoneType'
+2021-09-15 11:22:20,972 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:25:41,566 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 96, in download_csv
+    for row in rows:
+NameError: name 'rows' is not defined
+2021-09-15 11:26:39,429 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:26:57,666 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 106, in download_csv
+    cw = csv.writer(si)
+AttributeError: 'str' object has no attribute 'writer'
+2021-09-15 11:30:38,239 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:33:09,984 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:34:41,930 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:35:47,325 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:36:32,358 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:38:56,699 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:41:40,519 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 11:42:58,763 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]

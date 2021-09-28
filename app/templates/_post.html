@@ -1,0 +1,88 @@
+<!---subtemplate for base.html to render past records--->
+
+<table class="table table-hover">
+    <table class="table table-hover">    
+        <tr><h4>Run ID: {{ run.id }} </h4>Submitted on  {{ run.timestamp }}</tr>
+        <tr>
+            <td>
+                <b>operator 1: </b> {{ run.operator_1 }}
+                <br>
+                <b>operator 2: </b> {{ run.operator_2 }}
+            </td>
+            <td>
+                <b>Begin Date: </b> {{ run.date_begin }}
+                <br>
+                <b>End Date: </b> {{ run.date_end }}
+            </td>
+            <td>
+                <b>Final Disposition: </b> {{ run.final_dis }}
+            </td>
+        </tr>
+    </table>
+    <table class="table table-hover">
+        <tr><h4>Materials:</h4></tr>
+        <tr>
+            {% for panel in run.panels %}
+            <td>
+                <b>RSP Panel {{ panel.panel_type }}</b>
+                <br>
+                <b>Panel Lot: </b> {{ panel.panel_lot }}
+                <br>
+                <b>Panel Exp: </b> {{ panel.panel_e_dat }}
+            </td>
+            {% endfor %}
+        </tr>
+        </table>
+        <table class="table table-hover">
+        <tr>
+            <td>
+                <b>Copan UTM Lot: </b> {{ run.lot_nc }}
+                <br>
+                <b>Copan UTM Exp: </b> {{ run.e_dat_nc }}
+            </td>
+            <td>
+                <b>VII RSP Flex Lot: </b> {{ run.lot_vii }}
+                <br>
+                <b>VII RSP Flex DOM: </b> {{ run.e_dat_vii }}
+            </td>
+        </tr>
+    </table>
+    <table class="table table-hover">
+        <h4>Equipment:</h4>
+        <tr>
+            <td>
+                <b>Biosafety Cabinet: </b> {{ run.bsc_id }}
+                <br>
+                <b>Calibration Due Date: </b> {{ run.bsc_cdd }}
+            </td>    
+            <td>
+                <b>Pipette ID: </b> {{ run.pip_id }}
+                <br>
+                <b>Calibration Due Date: </b> {{ run.pip_cdd }}
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table class="table table-hover">
+        <h4>Instrument Errors: {{ run.is_ie }}</h4>
+        <tr>
+            {% for error in run.errors %}
+            <td>
+                <b>Error ID: </b> {{ error.id }}
+                <br>
+                <b>Cartridge ID: </b> {{ error.cart_id }}
+                <br>
+                <b>Error Type: </b> {{ error.error_type }}
+                <br>
+                <br>
+            </td>
+            {% endfor %}
+        </tr>
+    </table>
+</table>
+<br>
+<br>
+<hr noshade>
+<br>
+<br>

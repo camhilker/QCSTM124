@@ -1,0 +1,118 @@
+2021-09-15 10:56:03,943 ERROR: Exception on /download_csv [GET] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 98, in download_csv
+    return render_template('download_csv.html',  title='Retrieve Data as CSV', form=form)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\templates\download_csv.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 26, in block 'body'
+    {% block scripts %}
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\templates\download_csv.html", line 7, in block 'scripts'
+    {{ datepicker.picker(id=".dp", dateFormat='mm-dd-yy', maxDate= form.today) }}
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask_datepicker\main.py", line 138, in picker
+    ss = d.split('-') if len(d.split('-')) == 3 else []
+jinja2.exceptions.UndefinedError: 'app.forms.DownloadForm object' has no attribute 'today'
+2021-09-15 10:57:55,809 ERROR: Exception on /download_csv [GET] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 98, in download_csv
+    return render_template('download_csv.html',  title='Retrieve Data as CSV', form=form)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\templates\download_csv.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 26, in block 'body'
+    {% block scripts %}
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\templates\download_csv.html", line 7, in block 'scripts'
+    {{ datepicker.picker(id=".dp", dateFormat='mm-dd-yy') }}
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask_datepicker\main.py", line 138, in picker
+    ss = d.split('-') if len(d.split('-')) == 3 else []
+jinja2.exceptions.UndefinedError: 'app.forms.DownloadForm object' has no attribute 'today'
+2021-09-15 10:58:06,121 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 10:58:19,792 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 90, in download_csv
+    si = StringIO.StringIO()
+AttributeError: type object '_io.StringIO' has no attribute 'StringIO'
+2021-09-15 10:59:26,060 INFO: Attachment startup [in C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\__init__.py:29]
+2021-09-15 10:59:30,339 ERROR: Exception on /download_csv [POST] [in C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chilker\Anaconda3\envs\attachment\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\chilker\Projects\RP_Trending\QCSTM_124\app\routes.py", line 90, in download_csv
+    si = io.StringIO()
+NameError: name 'io' is not defined
