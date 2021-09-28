@@ -2,17 +2,6 @@
 
 {% block title %}
     {{ title }} - QCSTM-124
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-201960300-2"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-201960300-2');
-        </script>
-    </head>
 {% endblock %}
 
 {% block navbar %}
@@ -41,6 +30,17 @@
 {% endblock %}
 
 {% block content %}
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-201960300-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-201960300-2');
+        </script>
+    </head>
 <!---template for flask flash alerts, alerts are constructed as flask.flash(message, category) in routes.py--->
     <div class="container">
         {% with messages = get_flashed_messages(with_categories=true) %}
