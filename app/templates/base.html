@@ -2,6 +2,17 @@
 
 {% block title %}
     {{ title }} - QCSTM-124
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GY1QY81DB7"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-GY1QY81DB7');
+        </script>
+    </head>
 {% endblock %}
 
 {% block navbar %}
