@@ -1,6 +1,3 @@
-from app import app, db
-from app.models import Run, Error, Panel
-
 import pandas as pd
 import numpy as np
 
@@ -9,28 +6,6 @@ import plotly
 import json
 
 
-run_df = pd.read_sql(Run.query.statment, db.session.bind)
-error_df = pd.read_sql(Error.query.statment, db.session.bind)
-panel_df = pd.read_sql(Panel.query.statment, db.session.bind)
-
-m_1 = panel_df.merge(run_df, left_on='run_id', right_on='id')
-m_2 = error_df.merge(run_df, left_on='run_id', right_on='id')
-
-panel_df['vii_lot'] = m_1['lot_vii']
-panel_df['final_dis'] = m_1['final_dis']
-panel_df['date_begin'] = m_1['date_begin']
-panel_df['operator_1'] = m_1['operator_1']
-panel_df['operator_2'] = m_1['operator_2'].fillna('None')
-panel_df['is_ie'] = m_1['is_ie']
-
-error_df['final_dis'] = m_2['final_dis']
-error_df['date_begin'] = m_2['date_begin']
-error_df['operator_1'] = m_2['operator_1']
-error_df['operator_2'] = m_2['operator_2'].fillna('None')
-
-    
-    
-    
 def plot_panels(panel_df):
     fig = px.strip(panel_df, x='vii_lot', y='panel_type',
                  title="Panels", template='simple_white',
