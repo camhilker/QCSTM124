@@ -146,9 +146,9 @@ def download_csv():
 @app.route('/trending')
 def trending():
     
-    run_df = pd.read_sql(Run.query, db.session.bind)
-    error_df = pd.read_sql(Error.query, db.session.bind)
-    panel_df = pd.read_sql(Panel.query, db.session.bind)
+    run_df = pd.read_sql(db.session.query(Run).statement, db.session.bind)
+    error_df = pd.read_sql(db.session.query(Error).statement, db.session.bind)
+    panel_df = pd.read_sql(db.session.query(Panel).statement, db.session.bind)
 
     m_1 = panel_df.merge(run_df, left_on='run_id', right_on='id')
     m_2 = error_df.merge(run_df, left_on='run_id', right_on='id')
