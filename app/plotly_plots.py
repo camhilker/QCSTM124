@@ -32,7 +32,7 @@ def plot_panels(final_df):
                               line=dict(width=2,
                             color='DarkSlateGrey')))
 
-    plot_json = json.dumps(fig_2, cls=plotly.utils.PlotlyJSONEncoder)
+    plot_json = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     return plot_json
     
     
