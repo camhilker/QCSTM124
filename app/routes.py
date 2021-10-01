@@ -136,7 +136,7 @@ def download_csv():
     return render_template('download_csv.html',  title='Retrieve Data as CSV', form=form)
 
 
-@app.route('/tracking')
-def tracking():
-    return render_template('tracking.html', title='QCSTM-124 Data Tracking')
+@app.route('/trending')
+def trending():
+    return render_template('trending.html', title='QCSTM-124 Data Trending')
     
