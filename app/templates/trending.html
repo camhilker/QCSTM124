@@ -12,12 +12,12 @@
 
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script type="text/javascript">
-    var graphs = {{json_1 | safe}};
+    var graphs = {{ context.panel_viz | safe}};
     Plotly.plot('chart_1', graphs, {});
   </script>
 
   <script type="text/javascript">
-    var graphs = {{json_2 | safe}};
+    var graphs = {{ context.error_viz | safe}};
     Plotly.plot('chart_2', graphs, {});
   </script>
 {% endblock %}
