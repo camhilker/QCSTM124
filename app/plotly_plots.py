@@ -6,8 +6,8 @@ import plotly
 import json
 
 
-def plot_panels(panel_df):
-    fig = px.strip(panel_df, x='vii_lot', y='panel_type',
+def plot_panels(final_df):
+    fig = px.strip(final_df, x='vii_lot', y='panel_type',
                  title="Panels", template='simple_white',
                  color='final_dis', color_discrete_map={'fail':'red', 'pass':'lime'}, 
                  hover_name='panel_type', 
@@ -37,8 +37,8 @@ def plot_panels(panel_df):
     
     
     
-def plot_errors(error_df):
-    fig= px.strip(error_df, x='vii_lot', y='error_type',
+def plot_errors(final_df):
+    fig= px.strip(final_df, x='vii_lot', y='error_type',
                  title="Instrument Errors", template='simple_white',
                  color='final_dis', color_discrete_map={'fail':'red', 'pass':'lime'}, 
                  hover_name='cart_id', 
