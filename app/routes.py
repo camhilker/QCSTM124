@@ -215,9 +215,9 @@ def trending():
                               line=dict(width=2,
                             color='DarkSlateGrey')))
     
-    graphJSON_1 = json.dumps(fig_1, cls=plotly.utils.PlotlyJSONEncoder)
+    graphJSON = json.dumps(fig_1, cls=plotly.utils.PlotlyJSONEncoder)
     
-    graphJSON_2 = json.dumps(fig_2, cls=plotly.utils.PlotlyJSONEncoder)
+    #graphJSON_2 = json.dumps(fig_2, cls=plotly.utils.PlotlyJSONEncoder)
     
-    return render_template('trending.html', title='QCSTM-124 Data Trending', graphJSON_1=graphJSON_1, graphJSON_2=graphJSON_2)
+    return render_template('trending.html', title='QCSTM-124 Data Trending', graphJSON=graphJSON)
     
