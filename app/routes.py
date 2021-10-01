@@ -134,3 +134,9 @@ def download_csv():
         return send_file(memory_file, attachment_filename='QCSTM_data-pull.zip', as_attachment=True)
     
     return render_template('download_csv.html',  title='Retrieve Data as CSV', form=form)
+
+
+@app.route('/tracking')
+def tracking():
+    return render_template('tracking.html', title='QCSTM-124 Data Tracking')
+    
