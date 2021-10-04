@@ -16,8 +16,6 @@ import numpy as np
 
 
 
-
-@app.route('/')
 @app.route('/view_records')
 def view_records():
     flash(message='If you would like to report an error, please email chilker@luminexcorp.com and include the Run ID, Error ID (if applicable) and associated corrections. Thank You!', category='warning')
@@ -142,7 +140,7 @@ def download_csv():
     
     return render_template('download_csv.html',  title='Retrieve Data as CSV', form=form)
 
-
+@app.route('/')
 @app.route('/trending')
 def trending():
     
