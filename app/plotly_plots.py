@@ -7,7 +7,7 @@ import json
 
 
 def plot_panels(final_df):
-    fig = px.strip(final_df, x='vii_lot', y='panel_type',
+    fig = px.strip(final_df, x='vii_lot', y='panel_lot',
                  width=1500, height=500,
                  title="Panels", template='simple_white',
                  color='final_dis', color_discrete_map={'fail':'red', 'pass':'lime'}, 
