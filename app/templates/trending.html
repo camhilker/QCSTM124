@@ -3,11 +3,11 @@
 
 <!---template for rendering tracking visualizations on 'tracking' page--->
 
-{% block app_content %}
+{% block content %}
   <h1>RSP Data Monitoring by Lot &#x1F9EA; &#x1F9EB; &#x1F9EC;</h1>
-  <div class="container-xxl">
-    <div id="chart_1" class="chart" style="height:45%; width:90%"></div>
-    <div id="chart_2" class="chart" style="padding:10px"></div>
+  <div  style="height:45%; width:90%; overflow-x:scroll">
+    <div id="chart_1" class="chart"></div>
+    <div id="chart_2" class="chart"></div>
   </div>
 
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
