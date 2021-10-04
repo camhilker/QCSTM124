@@ -28,6 +28,7 @@ def plot_panels(final_df):
                          'operator_2': 'Operator 2',
                          'date_begin': 'Run Date'},)
     
+    fig.update_xaxes(categoryorder='category ascending')
     fig.update_traces(marker=dict(size=12,
                               line=dict(width=2,
                             color='DarkSlateGrey')))
@@ -57,6 +58,7 @@ def plot_errors(final_df):
                          'operator_2': 'Operator 2',
                          'date_begin': 'Run Date'})
     
+    fig.update_xaxes(categoryorder='category ascending')
     fig.update_traces(marker=dict(size=12,
                               line=dict(width=2,
                             color='DarkSlateGrey')))
