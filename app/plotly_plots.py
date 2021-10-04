@@ -8,7 +8,7 @@ import json
 
 def plot_panels(final_df):
     fig = px.strip(final_df, x='vii_lot', y='panel_type',
-                 width=1200, height=600,
+                 width=1500, height=300,
                  title="Panels", template='simple_white',
                  color='final_dis', color_discrete_map={'fail':'red', 'pass':'lime'}, 
                  hover_name='panel_type', 
@@ -41,7 +41,7 @@ def plot_panels(final_df):
     
 def plot_errors(final_df):
     fig= px.strip(final_df, x='vii_lot', y='error_type',
-                 width=1200, height=600,
+                 width=1500, height=300,
                  title="Instrument Errors", template='simple_white',
                  color='final_dis', color_discrete_map={'fail':'red', 'pass':'lime'}, 
                  hover_name='cart_id', 
